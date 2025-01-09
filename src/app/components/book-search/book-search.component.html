@@ -1,0 +1,30 @@
+<div class="search-container">
+    <h2>Search Books</h2>
+  
+    <!-- Search Input -->
+    <input
+      type="text"
+      [(ngModel)]="searchTerm"
+      placeholder="Enter book title, author, or keyword"
+    />
+    <button (click)="search()">Search</button>
+  
+    <!-- Error Message -->
+    <p *ngIf="errorMessage" class="error">{{ errorMessage }}</p>
+  
+    <!-- Search Results -->
+    <div *ngIf="books.length > 0">
+      <h3>Results:</h3>
+      <ul>
+        <li *ngFor="let book of books">
+          <strong>{{ book.title }}</strong> by {{ book.author }} <br />
+          Publisher: {{ book.publisher }} <br />
+          Price: {{ book.price | currency }}
+        </li>
+      </ul>
+    </div>
+  
+    <!-- No Results -->
+    <p *ngIf="!books.length && !errorMessage">No books found.</p>
+  </div>
+  
