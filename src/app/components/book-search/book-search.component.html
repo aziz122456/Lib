@@ -20,6 +20,7 @@
           <strong>{{ book.title }}</strong> by {{ book.author }} <br />
           Publisher: {{ book.publisher }} <br />
           Price: {{ book.price | currency }}
+          <button (click)="addToCart(book.id!)">Add to Cart</button>
         </li>
       </ul>
     </div>

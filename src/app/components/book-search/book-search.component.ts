@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { BookService, Book } from '../../services/book.service';
+import { CartService } from 'src/app/services/cart.service';
 
 @Component({
   selector: 'app-book-search',
@@ -11,8 +12,13 @@ export class BookSearchComponent {
   books: Book[] = [];
   errorMessage = '';
 
-  constructor(private bookService: BookService) {}
-
+  constructor(private bookService: BookService , private cartService: CartService )  {}
+  addToCart(bookId: string): void {
+    const userId = '12345'; 
+    this.cartService.addToCart(userId, bookId).subscribe(() => {
+      alert('Book added to cart!');
+    });
+  }
   search(): void {
     if (!this.searchTerm.trim()) {
       this.errorMessage = 'Search term cannot be empty!';
@@ -29,5 +35,8 @@ export class BookSearchComponent {
         this.errorMessage = 'An error occurred while searching for books.';
       },
     });
+
+
+    
   }
 }

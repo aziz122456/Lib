@@ -8,13 +8,19 @@ import { FormsModule } from '@angular/forms';
 import { BookSearchComponent } from './components/book-search/book-search.component';
 import { BookAddComponent } from './components/book-add/book-add.component';
 import { BookDeleteComponent } from './components/book-delete/book-delete.component';
+import { CartListComponent } from './components/cart-list/cart-list.component';
+import { OrderListComponent } from './components/order-list/order-list.component';
+import { TestComponent } from './components/test/test.component';
 @NgModule({
   declarations: [
     AppComponent,
     UserComponent,
     BookSearchComponent,
     BookAddComponent,
-    BookDeleteComponent
+    BookDeleteComponent,
+    CartListComponent,
+    OrderListComponent,
+    TestComponent
   ],
   imports: [
     BrowserModule,

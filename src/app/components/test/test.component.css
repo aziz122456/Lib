@@ -1,0 +1,33 @@
+.test-container {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+  }
+  
+  .test-container h1 {
+    margin-bottom: 20px;
+  }
+  
+  .test-container ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .test-container li {
+    margin-bottom: 10px;
+  }
+  
+  .test-container a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+  }
+  
+  .test-container a:hover {
+    text-decoration: underline;
+  }
+  
