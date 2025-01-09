@@ -1,0 +1,35 @@
+<div class="login-container">
+    <h2>Login</h2>
+    
+    <!-- Username Input -->
+    <div class="form-group">
+      <label for="username">Username</label>
+      <input
+        id="username"
+        type="text"
+        [(ngModel)]="username"
+        placeholder="Enter your username"
+      />
+    </div>
+    
+    <!-- Password Input -->
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input
+        id="password"
+        type="password"
+        [(ngModel)]="password"
+        placeholder="Enter your password"
+      />
+    </div>
+    
+    <!-- Login Button -->
+    <button (click)="login()">Login</button>
+    
+    <!-- Success Message -->
+    <p *ngIf="successMessage" class="success">{{ successMessage }}</p>
+    
+    <!-- Error Message -->
+    <p *ngIf="errorMessage" class="error">{{ errorMessage }}</p>
+  </div>
+  
