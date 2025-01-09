@@ -1,5 +1,5 @@
-.add-book-container {
-    max-width: 600px;
+.delete-book-container {
+    max-width: 400px;
     margin: 0 auto;
     padding: 20px;
     border: 1px solid #ddd;
@@ -8,32 +8,24 @@
     background-color: #f9f9f9;
   }
   
-  .add-book-container h2 {
+  .delete-book-container h2 {
     text-align: center;
     color: #333;
   }
   
-  .add-book-container form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-  }
-  
-  .add-book-container label {
-    font-weight: bold;
-    color: #555;
-  }
-  
-  .add-book-container input {
+  .delete-book-container input {
+    width: 100%;
     padding: 10px;
+    margin-bottom: 15px;
     border: 1px solid #ccc;
     border-radius: 4px;
     font-size: 14px;
   }
   
-  .add-book-container button {
+  .delete-book-container button {
+    width: 100%;
     padding: 10px 15px;
-    background-color: #007bff;
+    background-color: #dc3545;
     color: white;
     border: none;
     border-radius: 4px;
@@ -42,17 +34,17 @@
     transition: background-color 0.3s;
   }
   
-  .add-book-container button:hover {
-    background-color: #0056b3;
+  .delete-book-container button:hover {
+    background-color: #b02a37;
   }
   
-  .add-book-container .success {
+  .delete-book-container .success {
     color: green;
     text-align: center;
     margin-top: 10px;
   }
   
-  .add-book-container .error {
+  .delete-book-container .error {
     color: red;
     text-align: center;
     margin-top: 10px;
