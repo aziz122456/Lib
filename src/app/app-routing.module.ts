@@ -7,6 +7,7 @@ import { BookDeleteComponent } from './components/book-delete/book-delete.compon
 import { CartListComponent } from './components/cart-list/cart-list.component';
 import { OrderListComponent } from './components/order-list/order-list.component';
 import { UserComponent } from './components/user/user.component';
+import { RegistrationComponent } from './components/registration/registration.component';
 
 const routes: Routes = [
   { path: 'test', component: TestComponent },
@@ -16,7 +17,7 @@ const routes: Routes = [
   { path: 'cart-list', component: CartListComponent },
   { path: 'cart-list', component: CartListComponent },
   { path: 'user', component: UserComponent },
-
+  { path: 'register', component: RegistrationComponent },
   { path: 'order-list', component: OrderListComponent },
   { path: '', redirectTo: '/test', pathMatch: 'full' }, // Redirect to Test Component
 ];

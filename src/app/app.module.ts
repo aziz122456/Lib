@@ -11,6 +11,7 @@ import { BookDeleteComponent } from './components/book-delete/book-delete.compon
 import { CartListComponent } from './components/cart-list/cart-list.component';
 import { OrderListComponent } from './components/order-list/order-list.component';
 import { TestComponent } from './components/test/test.component';
+import { RegistrationComponent } from './components/registration/registration.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +21,8 @@ import { TestComponent } from './components/test/test.component';
     BookDeleteComponent,
     CartListComponent,
     OrderListComponent,
-    TestComponent
+    TestComponent,
+    RegistrationComponent
   ],
   imports: [
     BrowserModule,
