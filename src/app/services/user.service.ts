@@ -17,7 +17,7 @@ export interface LoginModel {
   providedIn: 'root',
 })
 export class UserService {
-  private apiUrl = 'http://localhost:5000/api/users'; // Replace with your actual API URL
+  private apiUrl = 'http://localhost:5048/api/users'; // Replace with your actual API URL
 
   constructor(private http: HttpClient) {}
 

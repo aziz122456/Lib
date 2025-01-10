@@ -19,7 +19,7 @@ const routes: Routes = [
   { path: 'user', component: UserComponent },
   { path: 'register', component: RegistrationComponent },
   { path: 'order-list', component: OrderListComponent },
-  { path: '', redirectTo: '/test', pathMatch: 'full' }, // Redirect to Test Component
+  { path: '', redirectTo: '/user', pathMatch: 'full' }, // Redirect to Test Component
 ];
 
 @NgModule({

@@ -12,6 +12,7 @@ import { CartListComponent } from './components/cart-list/cart-list.component';
 import { OrderListComponent } from './components/order-list/order-list.component';
 import { TestComponent } from './components/test/test.component';
 import { RegistrationComponent } from './components/registration/registration.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +23,8 @@ import { RegistrationComponent } from './components/registration/registration.co
     CartListComponent,
     OrderListComponent,
     TestComponent,
-    RegistrationComponent
+    RegistrationComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,

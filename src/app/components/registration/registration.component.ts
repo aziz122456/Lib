@@ -1,7 +1,7 @@
 // registration.component.ts
 import { Component } from '@angular/core';
 import { UserService ,User } from '../../services/user.service';
-
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-registration',
   templateUrl: './registration.component.html',
@@ -18,7 +18,7 @@ export class RegistrationComponent {
   successMessage: string = '';
   errorMessage: string = '';
 
-  constructor(private userService: UserService) {}
+  constructor(private userService: UserService , private router: Router) {}
 
   register(): void {
     this.userService.register(this.user).subscribe(
@@ -26,6 +26,7 @@ export class RegistrationComponent {
         this.successMessage = 'User registered successfully!';
         this.errorMessage = '';
         this.resetForm();
+        this.router.navigate(['/book-search']); // Redirect to Book Search
       },
       (error) => {
         this.errorMessage = 'Failed to register user. Please try again.';

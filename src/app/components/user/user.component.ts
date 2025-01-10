@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { UserService, LoginModel } from '../../services/user.service';
-
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-user',
   templateUrl: './user.component.html',
@@ -12,7 +12,7 @@ export class UserComponent {
   errorMessage = '';
   successMessage = '';
 
-  constructor(private userService: UserService) {}
+  constructor(private userService: UserService , private router: Router) {}
 
   login(): void {
     const loginModel: LoginModel = {
@@ -24,6 +24,7 @@ export class UserComponent {
       next: (user) => {
         this.successMessage = `Login successful! Welcome, ${user.username}.`;
         this.errorMessage = ''; // Clear error message
+        this.router.navigate(['/book-search']); 
       },
       error: (err) => {
         this.successMessage = ''; // Clear success message
