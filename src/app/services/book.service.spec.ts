@@ -18,7 +18,7 @@ describe('BookService', () => {
   });
 
   afterEach(() => {
-    httpMock.verify();
+    httpMock.verify(); // Verify that no unmatched requests are outstanding
   });
 
   it('should be created', () => {
@@ -33,9 +33,10 @@ describe('BookService', () => {
       expect(books).toEqual(mockBooks);
     });
 
-    const req = httpMock.expectOne(`${service['apiUrl']}/search?term=${searchTerm}`);
+    // Expect a request to the encoded URL
+    const req = httpMock.expectOne(`${service['apiUrl']}/search?term=Book%201`);
     expect(req.request.method).toBe('GET');
-    req.flush(mockBooks);
+    req.flush(mockBooks); // Provide mock data as the response
   });
 
   it('should add a book', () => {
